@@ -17,7 +17,7 @@ public:
     void lock(){
         while (1) {
             long long v = rwlock;
-            //CAS will fail is other thread sets read lock between these two statement
+            //CAS will fail is other thread sets read lock between these two instruction
             if (__sync_bool_compare_and_swap(&rwlock, v & ~1, v | 1)) {
                 while (v & ~1) { // while there are still readers
                     v = rwlock;

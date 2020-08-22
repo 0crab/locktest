@@ -8,3 +8,5 @@ link_libraries(pthread)
 add_executable(locktest main.cpp)
 
 add_executable(spin_rw spin_rw.cpp)
+
+add_executable(locks locks.cpp)

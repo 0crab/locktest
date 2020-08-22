@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-#include "rwlock.h"
+#include "cpprwlock.h"
 
 #define WRITE_THREAD_NUM  4
 #define READ_THREAD_NUM  4
